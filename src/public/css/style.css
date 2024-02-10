@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    color-scheme: light dark;
+}
+
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 100px;
+}
+
+.boxChat{
+    border: 1px solid #fff;
+    border-radius: 2%;
+    height: 100%;
+    min-height: 50vh;
+    width: 500px;
+    padding: 10px 10px;
+    margin: 25px 0px;
+
+}
+
+.inputChat{
+    width: 500px;
+    height: 40px;
+    
+}
+
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.loginForm input{
+    width: 350px;
+    height: 25px;
+}
+
+.titlePag{
+    display: flex;
+    margin-left:150px ;
+}
+
+
+
+.ulNavbar{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+    
+    list-style-type: none;
+    
+}
+
+.link a{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link a:hover{
+    color: red;
+    border-bottom: 2px solid black;
+}
+
+@media  (width<=600px) {
+    body{
+        display:flex;
+        flex-direction: row;
+        gap: 1rem;
+
+    }
+    .contentNavbar{
+        
+    }
+    .ulNavbar{
+        height: 100vh;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .boxChat , .inputChat{
+        width: 18rem;
+    }
+    .titlePag{
+        margin-left: auto ;
+    }
+    .mainContent{
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+}
+
+.linkRegister:hover {
+    background-color: black;
+    color: white;
+
+}
+.linkRegister{
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: white ;
+    color: black;
+    width: 150px;
+    height: 30px;
+    padding: 0px 15px;
+    border-radius: 2rem;
+}
