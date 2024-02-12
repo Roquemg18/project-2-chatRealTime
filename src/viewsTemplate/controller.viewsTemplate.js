@@ -3,7 +3,7 @@ const chatAccess = require("../middleware/chat.access");
 
 const router = Router();
 
-router.get("/", chatAccess, (req, res) => {
+router.get("/", (req, res) => {
   const username = req.session.user;
   res.render("index.handlebars", { username });
 });
