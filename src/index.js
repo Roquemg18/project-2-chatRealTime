@@ -8,11 +8,11 @@ const messages = [];
 
 router(app);
 
-const httpServer = app.listen(port, () => {
+app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-const io = new Server(httpServer);
+/* const io = new Server(httpServer);
 
 io.on("connection", (socket) => {
   socket.on("message", (data) => {
@@ -52,6 +52,4 @@ io.on("connection", (socket) => {
       console.error("Error al guardar el mensaje de equipo:", error);
     }
   });
-});
-
-/*funciona */
+}); */
