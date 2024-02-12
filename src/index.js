@@ -1,18 +1,15 @@
 const app = require("./app");
 const { port } = require("./config/app.config");
-const router = require("./routes");
 const { Server } = require("socket.io");
 const TeamMessage = require("./models/teamMessage.model");
 
 const messages = [];
 
-router(app);
-
-app.listen(port, () => {
+const httpServer = app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-/* const io = new Server(httpServer);
+const io = new Server(httpServer);
 
 io.on("connection", (socket) => {
   socket.on("message", (data) => {
@@ -52,4 +49,4 @@ io.on("connection", (socket) => {
       console.error("Error al guardar el mensaje de equipo:", error);
     }
   });
-}); */
+});

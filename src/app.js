@@ -2,6 +2,7 @@ const express = require("express");
 const handlebars = require("express-handlebars");
 const session = require("express-session");
 const mongoConnect = require("../db/index.js");
+const router = require("./router/index.js");
 
 const app = express();
 
@@ -21,4 +22,5 @@ app.use(
 );
 
 mongoConnect();
+router(app);
 module.exports = app;
